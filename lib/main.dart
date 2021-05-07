@@ -2,96 +2,141 @@ import 'package:flutter/material.dart';
 
 void main() {
   runApp(MaterialApp(
-    title: "Profile App",
-    theme: ThemeData(
-      primarySwatch: Colors.red,
-    ),
+    title: 'Express Food',
     debugShowCheckedModeBanner: false,
-    home: ProfileApp(),
+    home: ExpressFood(),
   ));
 }
 
-class ProfileApp extends StatelessWidget {
+class ExpressFood extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Profile App"),
+        leading: Icon(Icons.arrow_forward),
+        actions: [Icon(Icons.more_vert)],
+        title: Text('EXpRess Food'),
       ),
-      body: Column(
-        children: [
-          Center(
-            child: Image.asset(
-              "assets/model.png",
-              height: 200,
-              width: 180,
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            SizedBox(
+              height: 20,
             ),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(12.0),
-            child: Container(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10),
-                gradient: LinearGradient(colors: [Colors.red, Colors.yellow]),
+            Text(
+              "Aviliable Food Articles",
+              style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            Card(
+              elevation: 50,
+              child: Padding(
+                padding: const EdgeInsets.all(20.0),
+                child: SizedBox(
+                  width: 500,
+                  height: 400,
+                  child: Column(
+                    children: [
+                      Image.asset(
+                        "assets/food.jpg",
+                        fit: BoxFit.cover,
+                        width: 500,
+                        height: 200,
+                      ),
+                      SizedBox(
+                        height: 10,
+                      ),
+                      Text(
+                        "XYZ Food",
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      ),
+                      SizedBox(
+                        height: 10,
+                      ),
+                      Text(
+                          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."),
+                      SizedBox(
+                        height: 10,
+                      ),
+                    ],
+                  ),
+                ),
               ),
-              width: 500,
-              height: 100,
-              child: Text(
-                "\n  CR Poudyal\n\n  App Developer",
-                style:
-                    TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            Card(
+              elevation: 50,
+              child: Padding(
+                padding: const EdgeInsets.all(20.0),
+                child: SizedBox(
+                  width: 500,
+                  height: 400,
+                  child: Column(
+                    children: [
+                      Image.asset(
+                        "assets/food3.jpg",
+                        fit: BoxFit.cover,
+                        width: 500,
+                        height: 200,
+                      ),
+                      SizedBox(
+                        height: 10,
+                      ),
+                      Text(
+                        "XYZ Food",
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      ),
+                      SizedBox(
+                        height: 10,
+                      ),
+                      Text(
+                          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."),
+                    ],
+                  ),
+                ),
               ),
             ),
-          ),
-          ListTile(
-            leading: Icon(
-              Icons.arrow_forward,
-              color: Colors.green,
+            SizedBox(
+              height: 10,
             ),
-            title: Text("Java"),
-            subtitle: Text("Beginner"),
-            trailing: Icon(
-              Icons.delete,
-              color: Colors.red,
+            Card(
+              elevation: 50,
+              child: Padding(
+                padding: const EdgeInsets.all(20.0),
+                child: SizedBox(
+                  width: 500,
+                  height: 400,
+                  child: Column(
+                    children: [
+                      Image.asset(
+                        "assets/food1.jpg",
+                        fit: BoxFit.cover,
+                        width: 500,
+                        height: 200,
+                      ),
+                      SizedBox(
+                        height: 10,
+                      ),
+                      Text(
+                        "XYZ Food",
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      ),
+                      SizedBox(
+                        height: 10,
+                      ),
+                      Text(
+                          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."),
+                    ],
+                  ),
+                ),
+              ),
             ),
-          ),
-          ListTile(
-            leading: Icon(
-              Icons.arrow_forward,
-              color: Colors.green,
-            ),
-            title: Text("PHP"),
-            subtitle: Text("Intermediate"),
-            trailing: Icon(
-              Icons.delete,
-              color: Colors.red,
-            ),
-          ),
-          ListTile(
-            leading: Icon(
-              Icons.arrow_forward,
-              color: Colors.green,
-            ),
-            title: Text("JavaScript"),
-            subtitle: Text("Intermediate"),
-            trailing: Icon(
-              Icons.delete,
-              color: Colors.red,
-            ),
-          ),
-          ListTile(
-            leading: Icon(
-              Icons.arrow_forward,
-              color: Colors.green,
-            ),
-            title: Text("Dart / flutter"),
-            subtitle: Text("Beginner"),
-            trailing: Icon(
-              Icons.delete,
-              color: Colors.red,
-            ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
