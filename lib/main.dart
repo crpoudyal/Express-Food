@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'read.dart';
+
 void main() {
   runApp(MaterialApp(
     title: 'Express Food',
@@ -36,7 +38,7 @@ class ExpressFood extends StatelessWidget {
                 padding: const EdgeInsets.all(20.0),
                 child: SizedBox(
                   width: 500,
-                  height: 400,
+                  height: 420,
                   child: Column(
                     children: [
                       Image.asset(
@@ -60,6 +62,16 @@ class ExpressFood extends StatelessWidget {
                       SizedBox(
                         height: 10,
                       ),
+                      TextButton(
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => Read(),
+                              ));
+                        },
+                        child: Text("Read More"),
+                      ),
                     ],
                   ),
                 ),
@@ -74,7 +86,7 @@ class ExpressFood extends StatelessWidget {
                 padding: const EdgeInsets.all(20.0),
                 child: SizedBox(
                   width: 500,
-                  height: 400,
+                  height: 420,
                   child: Column(
                     children: [
                       Image.asset(
@@ -109,7 +121,7 @@ class ExpressFood extends StatelessWidget {
                 padding: const EdgeInsets.all(20.0),
                 child: SizedBox(
                   width: 500,
-                  height: 400,
+                  height: 420,
                   child: Column(
                     children: [
                       Image.asset(
