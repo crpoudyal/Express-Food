@@ -9,6 +9,9 @@ class _BuyState extends State<Buy> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text("XYZ Food"),
+      ),
       body: Center(
         child: Padding(
           padding: const EdgeInsets.symmetric(vertical: 20),
@@ -67,7 +70,10 @@ class _BuyState extends State<Buy> {
                       onPressed: () {
                         Navigator.pop(context);
                       },
-                      child: Text("Back"),
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Text("Buy Now"),
+                      ),
                     ),
                   ],
                 ),
