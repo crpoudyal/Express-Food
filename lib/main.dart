@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'read.dart';
+import 'buy.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -26,7 +26,7 @@ class ExpressFood extends StatelessWidget {
               height: 20,
             ),
             Text(
-              "Aviliable Food Articles",
+              "Aviliable Food",
               style: TextStyle(
                   fontSize: 30,
                   fontWeight: FontWeight.bold,
@@ -42,7 +42,7 @@ class ExpressFood extends StatelessWidget {
                 padding: const EdgeInsets.all(20.0),
                 child: SizedBox(
                   width: 500,
-                  height: 440,
+                  height: 470,
                   child: Column(
                     children: [
                       Image.asset(
@@ -73,21 +73,46 @@ class ExpressFood extends StatelessWidget {
                       SizedBox(
                         height: 10,
                       ),
+                      Row(
+                        children: [
+                          Icon(Icons.restaurant),
+                          Text(
+                            "  White Gold Restaurant",
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                fontFamily: 'lato',
+                                fontSize: 16),
+                          ),
+                        ],
+                      ),
+                      SizedBox(
+                        height: 10,
+                      ),
                       TextButton(
                         onPressed: () {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => Read(),
+                                builder: (context) => Buy(),
                               ));
                         },
-                        child: Text("Read More"),
+                        child: Text("Buy Now"),
                       ),
                     ],
                   ),
                 ),
               ),
             ),
+          ],
+        ),
+      ),
+      bottomNavigationBar: BottomAppBar(
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            Icon(Icons.home),
+            Icon(Icons.shopping_cart),
+            Icon(Icons.article)
           ],
         ),
       ),
